@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Pulse Feed</title>
+
+    <link rel="stylesheet" href="/styles.css">
+
+</head>
+
+<body>
+
+    <h1>Pulse Feed</h1>
+
+    <a href="/">Home</a>
+
+    <div class="feed">
+
+        <% posts.forEach(post => { %>
+
+        <div class="post">
+
+            <img class="avatar" src="<%= post.profilePic %>">
+
+            <h3><%= post.username %> <%= post.handle %></h3>
+
+            <p><%= post.content %></p>
+
+            <p>Likes: <%= post.likes %></p>
+
+            <p>Comments: <%= post.comments %></p>
+
+            <p><%= post.timestamp %></p>
+
+        </div>
+
+        <% }) %>
+
+    </div>
+
+</body>
+
+</html>
